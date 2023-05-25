@@ -11,7 +11,7 @@ class PageController extends Controller
     public function index ()
     {
         //dd(Train::all());
-        $trains = Train::all();
+        $trains = Train::orderBy('departure_time', 'asc')->get();
         return view('home', compact('trains'));
     }
 
