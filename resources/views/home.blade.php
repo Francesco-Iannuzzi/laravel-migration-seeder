@@ -3,14 +3,15 @@
 @section('content')
     <section>
         <div class="container">
-            <h1 class="mb-3">Trains</h1>
+            <h1 class="mb-5">Trains</h1>
             <div class="row row-cols-1 row-cols-lg-2 g-5">
                 @forelse ($trains as $train)
                     <div class="col">
                         <div class="card bg-success shadow p-3">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <h4 class="card-title mb-5">{{ $train->agency }}</h4>
+                                    <h2 class="card-title mb-5">{{ $train->agency }}</h2>
+                                    <hr>
                                     <div class="travel d-flex justify-content-around mb-3">
                                         <div class="departure d-flex justify-content-between gap-3">
                                             <h4 class="card-text">{{ $train->departure_station }}</h4>
