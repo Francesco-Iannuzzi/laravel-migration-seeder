@@ -23,7 +23,7 @@ class TrainSeeder extends Seeder
             $train->arrival_station = $faker->city();
             $train->departure_time = $faker->time();
             $train->arrival_time = $faker->time();
-            $train->code = $faker->bothify('??-######');
+            $train->code = $faker->bothify('??-####');
             $train->carriages = $faker->numberBetween(2, 11);
             $train->in_time = $faker->randomElement([1, 0]);
             $train->is_deleted = $faker->randomElement([1, 0]);
