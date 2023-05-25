@@ -10,8 +10,11 @@
                         <div class="card bg-success shadow p-3">
                             <div class="card h-100">
                                 <div class="card-body">
+
                                     <h2 class="card-title mb-5">{{ $train->agency }}</h2>
+
                                     <hr>
+
                                     <div class="travel d-flex justify-content-around mb-3">
                                         <div class="departure d-flex justify-content-between gap-3">
                                             <h4 class="card-text">{{ $train->departure_station }}</h4>
@@ -22,10 +25,16 @@
                                             <p class="card-text align-self-center">{{ $train->arrival_time }}</p>
                                         </div>
                                     </div>
+
                                     <div class="train_info">
-                                        <p class="card-text text-uppercase">Train Code: {{ $train->code }}</p>
-                                        <p class="card-text">Number of Carriages: {{ $train->carriages }}</p>
+                                        <div class="card-text text-uppercase">
+                                            <strong>Train Code:</strong>{{ $train->code }}
+                                        </div>
+                                        <div class="card-text">
+                                            <strong>Number of Carriages:</strong> {{ $train->carriages }}
+                                        </div>
                                     </div>
+
                                     <div
                                         class="train_status bg-warning text-white p-4 rounded-4 d-flex justify-content-between mt-4">
                                         @if ($train->in_time === 1)
@@ -49,6 +58,7 @@
                                             </div>
                                         @endif
                                     </div>
+
                                 </div>
                             </div>
                             <!-- /train card  -->
